@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --lagoon: '#2ECEDB';
+  --reef: '#007A9E';
+  --pacific: '#003F5C';
+  --sand: '#F4D7B7';
+  --beige: '#E8CFAF';
+  --driftwood: '#8A6E4E';
+  --hibiscus: '#FF6F91';
+  --coral: '#FF8A5C';
+  --palm: '#3A8F6A';
+  --islandsky: '#AEE1F9';
+  --cloud: '#FAFAF7';
+  --storm: '#2F5D62';
 }
 
 @theme inline {
@@ -22,3 +34,50 @@ body {
   background-color: #ffffff;
   color: #171717;
 }
+
+#welcome-section {
+  background-image: url('/images/taniti-welcome.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.text-reef { color: #007A9E; }
+
+/* Ocean & Lagoon */
+.bg-lagoon { background-color: #2ECEDB; }
+.text-lagoon { color: #2ECEDB; }
+
+.bg-reef { background-color: #007A9E; }
+
+.bg-pacific { background-color: #003F5C; }
+.text-pacific { color: #003F5C; }
+
+/* Sand & Shore */
+.bg-sand { background-color: #F4D7B7; }
+.text-sand { color: #F4D7B7; }
+
+.bg-beige { background-color: #E8CFAF; }
+.text-beige { color: #E8CFAF; }
+
+.bg-driftwood { background-color: #8A6E4E; }
+.text-driftwood { color: #8A6E4E; }
+
+/* Flora & Sunset */
+.bg-hibiscus { background-color: #FF6F91; }
+.text-hibiscus { color: #FF6F91; }
+
+.bg-coral { background-color: #FF8A5C; }
+.text-coral { color: #FF8A5C; }
+
+.bg-palm { background-color: #3A8F6A; }
+.text-palm { color: #3A8F6A; }
+
+/* Sky & Atmosphere */
+.bg-islandsky { background-color: #AEE1F9; }
+.text-islandsky { color: #AEE1F9; }
+
+.bg-cloud { background-color: #FAFAF7; }
+.text-cloud { color: #FAFAF7; }
+
+.bg-storm { background-color: #2F5D62; }
+.text-storm { color: #2F5D62; }

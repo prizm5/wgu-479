@@ -28,59 +28,72 @@ export default function RootLayout({
       <body
         className={`bg-white ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="top-4 flex items-center gap-20 bg-white/90 px-4 ">
-          <Image
-            src="/taniti-logo.png"
-            alt="Taniti Island Logo"
-            width={100}
-            height={20}
-            priority
-          />
-          <nav className="flex items-center gap-2">
-            <a
-              href="/"
-              className="text-sm font-medium text-zinc-950 hover:underline"
-            >
-              Getting Here
+        <header className="sticky top-0 z-50 border-b border-gray-200 bg-white px-8 py-4 shadow-sm">
+          <div className="mx-auto flex max-w-7xl items-center justify-between">
+            <a href="/" className="flex items-center">
+              <Image
+                src="/images/taniti-logo.png"
+                alt="Taniti Island Logo"
+                width={100}
+                height={40}
+                priority
+              />
             </a>
-            |
-            <a
-              href="/about"
-              className="text-sm font-medium text-zinc-950 hover:underline"
-            >
-              Where to Stay
-            </a>
-            |
-            <a
-              href="/about"
-              className="text-sm font-medium text-zinc-950 hover:underline"
-            >
-              Getting Around
-            </a>
-            |
-            <a
-              href="/about"
-              className="text-sm font-medium text-zinc-950 hover:underline"
-            >
-              Entertainment
-            </a>
-            |
-            <a
-              href="/about"
-              className="text-sm font-medium text-zinc-950 hover:underline"
-            >
-              Sightseeing
-            </a>
-          </nav>
-        </div>
-        <hr className="mt-1 border-zinc-200" />
-        <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans bg-black">
+            <nav className="flex items-center gap-1">
+              <a
+                href="/"
+                className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
+              >
+                Home
+              </a>
+              <span className="text-gray-300">|</span>
+              <a
+                href="/getting-here"
+                className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
+              >
+                Getting Here
+              </a>
+              <span className="text-gray-300">|</span>
+              <a
+                href="/where-to-stay"
+                className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
+              >
+                Where to Stay
+              </a>
+              <span className="text-gray-300">|</span>
+              <a
+                href="/getting-around"
+                className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
+              >
+                Getting Around
+              </a>
+              <span className="text-gray-300">|</span>
+              <a
+                href="/entertainment"
+                className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
+              >
+                Entertainment
+              </a>
+              <span className="text-gray-300">|</span>
+              <a
+                href="/sightseeing"
+                className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
+              >
+                Sightseeing
+              </a>
+            </nav>
+          </div>
+        </header>
+        <div className="bg-white">
           {children}
         </div>
-        <hr className="mt-1 border-zinc-200" />
-        <div className="mb-4 mt-2 flex justify-center text-sm text-zinc-500">
-          &copy; 2026 Taniti Island. All rights reserved.
-        </div>
+        <footer className="border-t border-gray-200 bg-white py-6">
+          <div className="mx-auto flex max-w-7xl justify-center px-8">
+            <p className="text-sm text-gray-500">
+              &copy; 2026 Taniti Island. All rights reserved.
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   );
