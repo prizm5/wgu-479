@@ -6,39 +6,38 @@ const image_placeholder = (
   </svg>
 );
 
-const HotelCard = () => (
-<div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
-                <div className="flex h-32 items-center justify-center bg-gray-100">
-                {image_placeholder}
-                </div>
-                <div className="p-4">
-                  <div className="mb-2 space-y-2">
-                    <div className="h-3 w-3/4 rounded bg-gray-200"></div>
-                    <div className="h-2 w-full rounded bg-gray-100"></div>
-                    <div className="h-2 w-full rounded bg-gray-100"></div>
-                    <div className="h-2 w-2/3 rounded bg-gray-100"></div>
-                  </div>
-                  <div className="mt-4 h-8 w-24 rounded bg-gray-300"></div>
-                </div>
-              </div>
-)
 
 interface NavCardProps {
   title: string;
   description: string;
+  img: string;
+  img_alt?: string;
+  url: string;
 }
 
-const NavCard: React.FC<NavCardProps> = ({ title, description }) => (
-
-          <div className="flex flex-col items-center text-center">
-            <div className="mb-4 flex h-20 w-20">
-              {image_placeholder}
-            </div>
-            <a href="/getting-around"><h3 className="mb-2 text-xl font-semibold text-gray-800">{title}</h3></a>
-            <div className="mx-auto mb-3 h-0.5 w-24 bg-gray-300"></div>
-            <p className="text-sm text-gray-600"> {description} </p>
-          </div>
+const NavCard: React.FC<NavCardProps> = ({ title, description, img, img_alt, url }) => (
+  <div className="flex flex-col items-center text-center">
+    <div className="mb-4 flex">
+      <img src={`./images/${img}`} alt={img_alt} />
+    </div>
+    <a href={url} ><h3 className="mb-2 text-xl font-semibold text-gray-800">{title}</h3></a>
+    <div className="mx-auto mb-3 h-0.5 w-24 bg-gray-300"></div>
+    <p className="text-sm text-gray-600"> {description} </p>
+  </div>
 );
+
+const HotelCard: React.FC<NavCardProps> = ({ title, description, img, img_alt, url }) => (
+  <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
+    <div className="bg-gray-100">
+      <img src={`./images/${img}`} alt={title} className="w-100 h-40" />
+    </div>
+    <div className="p-2">
+      <div>{description}</div>
+      <div className=" p-1 mt-4 h-8 w-24 rounded bg-gray-300">Book Now</div>
+    </div>
+  </div>
+)
+
 export default function Home() {
   return ( 
     <main className="w-full bg-white">
@@ -61,9 +60,9 @@ export default function Home() {
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
-          <NavCard title="Exploring" description="Discover pristine beaches, rainforest trails, and breathtaking mountain vistas." />
-          <NavCard title="Entertainment" description="Enjoy local restaurants, nightlife, cultural performances, and island festivals." />
-          <NavCard title="Transportation" description="Easy access via our airport, plus convenient public buses, taxis, and rental options." />
+          <NavCard title="Exploring" description="Discover pristine beaches, rainforest trails, and breathtaking mountain vistas." img="exploring.jpeg" img_alt="Exploring Icon" url="/sightseeing" />
+          <NavCard title="Entertainment" description="Enjoy local restaurants, nightlife, cultural performances, and island festivals." img="entertainment.jpeg" img_alt="Entertainment Icon" url="/entertainment" />
+          <NavCard title="Transportation" description="Easy access via our airport, plus convenient public buses, taxis, and rental options." img="transportation.jpeg" img_alt="Transportation Icon" url="/getting-around" />
         </div>
       </section>
       <section className="bg-gray-50 px-8 py-16">
@@ -80,9 +79,9 @@ export default function Home() {
               </svg>
             </button>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              <HotelCard />
-              <HotelCard />
-              <HotelCard />
+              <HotelCard title="Hotel Paradise" description="Luxurious beachfront resort with stunning ocean views." img="hotel-paradise.jpeg" url="/hotel-paradise" />
+              <HotelCard title="Mountain Retreat" description="Modern accommodations nestled in the mountains for a peaceful getaway." img="mountain-retreat.jpeg" url="/mountain-retreat" />
+              <HotelCard title="City Inn" description="Conveniently located hotel in the heart of the island's main town." img="city-inn.jpeg" url="/city-inn" />
             </div>
             <button 
               className="absolute -right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg hover:bg-gray-100"
