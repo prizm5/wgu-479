@@ -31,12 +31,11 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 border-b border-gray-200 bg-white px-8 py-4 shadow-sm">
           <div className="mx-auto flex max-w-7xl items-center justify-between">
             <a href="/" className="flex items-center">
-              <Image
-                src="/images/taniti-logo.png"
+              <img
+                src="./images/taniti-logo.png"
                 alt="Taniti Island Logo"
                 width={100}
                 height={40}
-                priority
               />
             </a>
             <nav className="flex items-center gap-1">

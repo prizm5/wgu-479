@@ -42,7 +42,7 @@ const NavCard: React.FC<NavCardProps> = ({ title, description }) => (
 export default function Home() {
   return ( 
     <main className="w-full bg-white">
-      <section id="welcome-section" className="relative min-h-[500px] w-full items-center justify-center px-8 py-10 text-sand">
+      <section id="welcome-section" style={{backgroundImage:"url(./images/taniti-welcome.png"}} className="relative min-h-[500px] w-full items-center justify-center px-8 py-10 text-sand">
         <div id="welcome" className="relative z-10 text-left">
           <h1 className="mb-2 text-5xl font-bold tracking-tight text-shadow-lg">
             Welcome to Taniti

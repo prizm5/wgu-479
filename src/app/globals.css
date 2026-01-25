@@ -36,7 +36,6 @@ body {
 }
 
 #welcome-section {
-  background-image: url('./images/taniti-welcome.png');
   background-size: cover;
   background-position: center;
 }
