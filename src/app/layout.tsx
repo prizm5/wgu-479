@@ -47,35 +47,35 @@ export default function RootLayout({
               </a>
               <span className="text-gray-300">|</span>
               <a
-                href="/getting-here"
+                href="./getting-here"
                 className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
               >
                 Getting Here
               </a>
               <span className="text-gray-300">|</span>
               <a
-                href="/where-to-stay"
+                href="./where-to-stay"
                 className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
               >
                 Where to Stay
               </a>
               <span className="text-gray-300">|</span>
               <a
-                href="/getting-around"
+                href="./getting-around"
                 className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
               >
                 Getting Around
               </a>
               <span className="text-gray-300">|</span>
               <a
-                href="/entertainment"
+                href="./entertainment"
                 className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
               >
                 Entertainment
               </a>
               <span className="text-gray-300">|</span>
               <a
-                href="/sightseeing"
+                href="./sightseeing"
                 className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
               >
                 Sightseeing
