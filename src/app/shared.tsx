@@ -1,3 +1,22 @@
+interface BreadcrumbProps {
+  label: string;
+}
+
+export const Breadcrumbs: React.FC<BreadcrumbProps> = ({label}) => {
+  return (
+    <nav aria-label="Breadcrumb" className="mb-6">
+      <ol className="flex items-center space-x-2 text-sm text-gray-600">
+        <li className="flex items-center">
+          <a href="./" className="hover:text-gray-900 transition-colors">Home</a>
+        </li>
+        <li className="flex items-center">
+          <span className="text-bold">&gt;&nbsp;</span>
+          <span className="font-medium text-gray-900" aria-current="page">{label}</span>
+        </li>
+      </ol>
+    </nav>
+  );
+};
 
 interface CardProps {
   title: string;

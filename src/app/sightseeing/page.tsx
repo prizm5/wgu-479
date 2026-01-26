@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { HeroSection, PictureCard } from "../shared";
+import { Breadcrumbs, HeroSection, PictureCard } from "../shared";
 
 export default function Sightseeing() {
   return (
@@ -9,13 +9,15 @@ export default function Sightseeing() {
         title="Sightseeing"
         subtitle="Come see the many wonders"
       />
-
-      <section className="bg-white px-8 py-16">
+      <div className="container mx-auto px-8 py-2">
+        <Breadcrumbs label="Sightseeing"/>
+      </div>
+      <section className="bg-white px-8 py-2">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <PictureCard 
               title="Taniti City"
-              description="Explore the vibrant Taniti City, where modern attractions blend seamlessly with rich cultural heritage, offering visitors a unique urban experience."
+              description="Explore the vibrant Taniti City, which boasts native architecture and nearby white, sandy beaches that encircle Yellow Leaf Bay."
               img="./images/taniti-city.jpeg"
             />
 

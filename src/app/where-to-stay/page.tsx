@@ -1,4 +1,4 @@
-import { HeroSection, PictureCard } from "../shared"
+import { Breadcrumbs, HeroSection, PictureCard } from "../shared"
 
 export default function WhereToStay() {
   return (
@@ -8,8 +8,10 @@ export default function WhereToStay() {
         title="Accommodations"
         subtitle="Where to stay in Paradise"
       />
-
-      <section className="bg-white px-8 py-16">
+      <div className="container mx-auto px-8 py-2">
+        <Breadcrumbs label="Where to Stay" />
+      </div>
+      <section className="bg-white px-8 py-2">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <PictureCard 

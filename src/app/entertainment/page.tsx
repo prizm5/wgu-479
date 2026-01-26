@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { HeroSection, PictureCard } from "../shared";
+import { Breadcrumbs, HeroSection, PictureCard } from "../shared";
 
 export default function Entertainment() {
   return (
@@ -9,8 +9,10 @@ export default function Entertainment() {
         title="Entertainment"
         subtitle="Life is too short to stay inside"
       />
-      
-      <section className="bg-white px-8 py-16">
+      <div className="container mx-auto px-8 py-2">
+        <Breadcrumbs label="Entertainment" />
+      </div>
+      <section className="bg-white px-8 py-2">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <PictureCard 
@@ -27,7 +29,7 @@ export default function Entertainment() {
 
             <PictureCard
               title="Casual Fun"
-              description="Relax and unwind with beach volleyball, picnics by the shore, and casual strolls along the island's beautiful beaches."
+              description="Relax and unwind at the beach, visit several pubs, including a microbrewery, dance at a new dance club,  playing at an arcade, visiting art galleries, and bowling"
               img="./images/casual-fun.jpeg"
             />  
 

@@ -1,29 +1,19 @@
 import Image from "next/image";
+import { Breadcrumbs, HeroSection } from "../shared";
 
 export default function GettingHere() {
   return (
     <main className="w-full bg-white">
-      <section id="getting-here-section" 
-        style={
-            {
-                backgroundImage:"url(./images/getting-here.jpeg)",
-                backgroundRepeat:"no-repeat",
-                backgroundSize:"cover", 
-                backgroundPosition:"center"
-            }} 
-        className="min-h-[400px] w-full items-center justify-center px-8 py-10 text-sand">
-        <div className="relative z-10 text-center">
-          <h1 className="mt-62 text-4xl font-bold tracking-tight text-gray-800">
-            Starting your journey
-          </h1>
-          <p className="text-lg text-gray-700">Romance and Adventure Await</p>
-        </div>
-      </section>
-
-      <section className="bg-white px-8 py-16">
+      <HeroSection
+        backgroundImage="./images/getting-here.jpeg"
+        title="Getting Here"
+        subtitle="Romance and Adventure Await"
+      />
+      <div className="container mx-auto px-8 py-2">
+        <Breadcrumbs label="Getting Here" />
+      </div>
+      <section className="bg-white px-8 py-2">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-6 text-center text-3xl font-bold text-gray-800">Travel Options</h2>
-          <div className="mx-auto mb-12 h-1 w-48 bg-gray-300"></div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="overflow-hidden rounded-lg border border-gray-300 bg-white p-8">
               <h3 className="mb-6 text-center text-xl font-semibold text-gray-800">Air Travel</h3>
@@ -34,10 +24,9 @@ export default function GettingHere() {
 
               <div className="space-y-3">
                 <p>
-                    Flying into Taniti International Airport is the most convenient way to reach the island. With regular flights from major cities, you can be on the beach in no time.
+                    Taniti Airport is currently serviced by smaller jets and propeller planes, making it the most convenient way to reach the island.
                 </p>
               </div>
-
 
               <div className="mt-6 flex justify-center">
                 <div className="text-center h-8 w-32 rounded bg-gray-400">Book Now</div>
@@ -53,7 +42,7 @@ export default function GettingHere() {
 
               <div className="space-y-3">
                 <p>
-                    Cruising to Taniti Island offers a scenic and relaxing way to arrive. Enjoy the ocean views and onboard amenities as you sail to your destination.
+                    A small cruise ship that docks in Yellow Leaf Bay for one night per week to Taniti Island offers a scenic and relaxing way to arrive. 
                 </p>
               </div>
 
@@ -64,6 +53,23 @@ export default function GettingHere() {
           </div>
         </div>
       </section>
+      <section className="bg-gray-50 px-8 py-2">
+        <h2 className="mb-6 text-center text-2xl font-semibold text-gray-800">Traveler Tips</h2>
+        <ul className="mx-auto mb-8 max-w-6xl space-y-4">
+          <li className="list-disc px-4">
+            Taniti enjoys a large number of national holidays, and many tourist attractions and restaurants will be closed on holidays.
+          </li>
+          <li className="list-disc px-4">
+            The official languages of Taniti are Tanitian and English. Many locals also speak Japanese and Spanish.
+          </li>
+          <li className="list-disc px-4">
+            Taniti uses the U.S. dollar as its currency, but many businesses will also accept euros and yen. 
+            Several banks facilitate currency exchange, and many businesses accept major credit cards.
+          </li> 
+        </ul>
+      </section>
+
+
     </main>
   );
 }
