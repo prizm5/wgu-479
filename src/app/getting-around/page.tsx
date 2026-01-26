@@ -1,25 +1,14 @@
 import Image from "next/image";
-import { PictureCard } from "../shared";
+import { HeroSection, PictureCard } from "../shared";
 
 export default function GettingAround() {
   return (
     <main className="w-full bg-white">
-      <section
-        style={
-            {
-                backgroundImage:"url(./images/road.jpeg)",
-                backgroundRepeat:"no-repeat",
-                backgroundSize:"cover", 
-                backgroundPosition:"center"
-            }} 
-        className="min-h-[400px] w-full items-center justify-center px-8 py-10 text-sand">
-        <div className="relative z-10 text-center">
-          <h1 className="mt-62 text-4xl font-bold tracking-tight">
-            Getting Around
-          </h1>
-          <p className="text-lg">Choose your own adventure</p>
-        </div>
-      </section>
+        <HeroSection
+        backgroundImage="./images/road.jpeg"
+        title="Getting Around"
+        subtitle="Choose your own adventure"
+      />
 
       <section className="bg-white px-8 py-16">
         <div className="mx-auto max-w-6xl">
